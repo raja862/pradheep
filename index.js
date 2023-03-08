@@ -21,9 +21,6 @@ app.use('/uploads',express.static(__dirname+'/uploads'));
 
 mongoose.connect('mongodb+srv://Blog:9626@cluster0.iz3wqkv.mongodb.net/?retryWrites=true&w=majority')
 
-console.log(mongoose)
-
-
 app.post('/register',async (req,res)=>{
    const {username,password} = req.body; 
  try{
@@ -132,6 +129,4 @@ app.post('/login',async (req,res)=>{
       res.json(postDoc);
     })
 
-app.listen(4000,()=>{
-  console.log("server port connected 4000")
-})
+app.listen(4000);
